@@ -20,12 +20,12 @@ public class MyStack implements StackInterface {
 
     @Override
     public void push(Patient patient) {
-        stack.add(patient); // Add to the end of the list (top of the stack)
+        stack.add(patient); //Add to the end of the list (top of the stack)
     }
 
     @Override
     public Patient pop() {
-        return stack.remove(stack.size() - 1); // Remove from the end of the list (top of the stack)
+        return stack.remove(stack.size() - 1); //Remove from the end of the list (top of the stack)
     }
 
     @Override
@@ -41,8 +41,10 @@ public class MyStack implements StackInterface {
     @Override
     public String toString() {
         String result = "Stack (Top to Bottom):\n";
+        //Loop through the stack from top to bottom
         for (int i = stack.size() - 1; i >= 0; i--) {
-            result += stack.get(i).toString() + "\n"; // Concatenate strings
+            //Add the patient's details to the result string
+            result += stack.get(i).toString() + "\n"; //Concatenate strings
         }
         return result;
     }

@@ -20,12 +20,12 @@ public class MyQueue implements QueueInterface {
 
     @Override
     public void enqueue(Patient patient) {
-        queue.add(patient); // Add to the end of the queue
+        queue.add(patient); //Add to the end of the queue
     }
 
     @Override
     public Patient dequeue() {
-        return queue.remove(0); // Remove from the front of the queue
+        return queue.remove(0); //Remove from the front of the queue
     }
 
     @Override
@@ -40,13 +40,14 @@ public class MyQueue implements QueueInterface {
 
     //recursive method 
     public int countPatientsRecursive(int index) {
+        //If the index is greater than or equal to the size of the queue, return 0
         if (index >= queue.size()) {
-            return 0; // Base case: end of queue
+            return 0; // end of queue
         }
         return 1 + countPatientsRecursive(index + 1); // Recursive case
     }
 
-    // Wrapper method for recursive counting
+    //Wrapper method for recursive counting
     public int countPatients() {
         return countPatientsRecursive(0);
     }

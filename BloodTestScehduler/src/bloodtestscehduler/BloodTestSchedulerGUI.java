@@ -49,7 +49,7 @@ public class BloodTestSchedulerGUI extends javax.swing.JFrame {
         queue.enqueue(patient7);
         queue.enqueue(patient8);
 
-        // Add patients to the waiting queue
+        //Add patients to the waiting queue
         waitingQueue.enqueue(patient1);
         waitingQueue.enqueue(patient2);
         waitingQueue.enqueue(patient3);
@@ -73,20 +73,20 @@ public class BloodTestSchedulerGUI extends javax.swing.JFrame {
         addNoShow(noShow3);
         addNoShow(noShow4);
         addNoShow(noShow5);
-        addNoShow(noShow6); // This will remove the oldest no-show (No-Show 1)
+        addNoShow(noShow6); //This will remove the oldest no-show (No-Show 1)
     }
 
-    // Method to display the waiting queue
+    //Method to display the waiting queue
     private String displayWaitingQueue() {
         return waitingQueue.toString();
     }
 
-    // Method to count patients in the waiting queue using recursion
+    //Method to count patients in the waiting queue using recursion
     private int countPatientsInQueue() {
         return waitingQueue.countPatients();
     }
 
-    // Method to add a no-show patient to the stack
+    //Method to add a no-show patient to the stack
     private void addNoShow(Patient patient) {
         if (noShows.size() >= 5) {
             noShows.pop(); // Remove the oldest no-show if the stack is full
@@ -94,7 +94,7 @@ public class BloodTestSchedulerGUI extends javax.swing.JFrame {
         noShows.push(patient); // Add the new no-show
     }
 
-    // Method to display the last 5 no-shows
+    //Method to display the last 5 no-shows
     private String displayNoShows() {
         return "Last 5 No-Shows:\n" + noShows.toString();
     }
@@ -202,7 +202,7 @@ public class BloodTestSchedulerGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_displayQBtnActionPerformed
 
     private void nextPatientBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextPatientBtnActionPerformed
-        // Dequeue the next patient and display their details
+        //Dequeue the next patient and display their details
         if (!queue.isEmpty()) {
             Patient nextPatient = (Patient) queue.dequeue();
             displayTa.setText("Next Patient:\n" + nextPatient.toString());
